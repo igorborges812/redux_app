@@ -1,28 +1,33 @@
-import React from 'react'
-import './Home.css'
-import logo from './img/logo.png'
-import cart from './img/cart.png'
-import elipse from './img/elipse.png'
-// import { Grid } from '@mui/material'
-import Chevron from 'react-chevron'
+import React, { Component } from 'react'
+import api from './services/api'
+import Card from './components/Card'
 
-function Home() {
-  return (
-    <div className="navbar">
-      <img className="Logo" src={logo} alt="Logo Razzo" />
-      <div className="Dashboard">Dashboard</div>
+class Home extends Component {
+  state = {}
 
-      <div className="perfil">
-        <img src={elipse} alt="Perfil" />
-        <div className="seta">
-          <Chevron />
-        </div>
+  async componentDidMount() {
+    const response = await api.get('')
+
+    this.setState({ restaurantes: response.data })
+  }
+
+  render() {
+    const { restaurantes } = this.state
+    console.log(restaurantes)
+    return (
+      <div>
+        {restaurantes?.data.map(restaurante => (
+          <Card
+            // key={restaurante._id}
+            name={restaurante.name}
+            description={restaurante.description}
+            street_name={restaurante.address.street_name}
+            street_number={restaurante.address.street_number}
+            neighborhood={restaurante.address.neighborhood}
+          />
+        ))}
       </div>
-
-      <div className="Cart-logo">
-        <img src={cart} alt="Sacola" />
-      </div>
-    </div>
-  )
+    )
+  }
 }
 export default Home
