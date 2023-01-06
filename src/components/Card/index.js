@@ -1,21 +1,28 @@
+// import { display } from '@mui/system'
 import React from 'react'
-import { Container, Li, Span, P, Titulo } from './styles'
+import { Container, Li, Span, P, Titulo, Img, Texto, Logo } from './styles'
 
 export default function Card({
   name,
   street_name,
   street_number,
   neighborhood,
-  description
+  description,
+  logo
 }) {
   return (
     <Li>
       <Container>
-        <Titulo>{name}</Titulo>
-        <P>{description}</P>
-        <Span>
-          {street_name}, {street_number}, {neighborhood}
-        </Span>
+        <Logo>
+          <Img align="left" src={logo}></Img>
+        </Logo>
+        <Texto>
+          <Titulo>{name}</Titulo>
+          <P>{description}</P>
+          <Span>
+            {street_name}, {street_number}, {neighborhood}
+          </Span>
+        </Texto>
       </Container>
     </Li>
   )

@@ -20,6 +20,7 @@ class Home extends Component {
           <Card
             // key={restaurante._id}
             name={restaurante.name}
+            logo={restaurante.assets.logo}
             description={restaurante.description}
             street_name={restaurante.address.street_name}
             street_number={restaurante.address.street_number}
