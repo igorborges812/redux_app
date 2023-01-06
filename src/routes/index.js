@@ -9,7 +9,7 @@ function Routes() {
     <BrowserRouter>
       <Switch>
         <Route exact path="/" element={<App />} />
-        <Route path="/Home" element={<Home />} />
+        <Route path="/home" element={<Home />} />
       </Switch>
     </BrowserRouter>
   )

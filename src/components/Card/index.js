@@ -1,5 +1,6 @@
 // import { display } from '@mui/system'
 import React from 'react'
+import { Navigate } from 'react-router-dom'
 import { Container, Li, Span, P, Titulo, Img, Texto, Logo } from './styles'
 
 export default function Card({

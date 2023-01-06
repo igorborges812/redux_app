@@ -17,6 +17,17 @@ class Home extends Component {
     return (
       <div>
         {restaurantes?.data.map(restaurante => (
+          <Card 
+            // key={restaurante._id}
+            name={restaurante.name}
+            logo={restaurante.assets.logo}
+            description={restaurante.description}
+            street_name={restaurante.address.street_name}
+            street_number={restaurante.address.street_number}
+            neighborhood={restaurante.address.neighborhood}
+          />
+        ))}
+        {restaurantes?.data.map(restaurante => (
           <Card
             // key={restaurante._id}
             name={restaurante.name}
