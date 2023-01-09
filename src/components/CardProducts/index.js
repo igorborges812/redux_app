@@ -1,26 +1,26 @@
 import React from 'react'
-import { ContainerProduct, Li, Span, P, Titulo, Img, Texto, Logo} from './styles'
+import {
+  ContainerProduct,
+  Li,
+  Span,
+  P,
+  Titulo,
+  Img,
+  Texto,
+  Logo
+} from './styles'
 
-export default function Card({
-  name,
-  street_name,
-  street_number,
-  neighborhood,
-  description,
-  logo
-}) {
+export default function Card({ name, description, url, pricing }) {
   return (
     <Li>
       <ContainerProduct>
         <Logo>
-          <Img align="left" src={logo}></Img>
+          <Img align="left" src={url}></Img>
         </Logo>
         <Texto>
           <Titulo>{name}</Titulo>
           <P>{description}</P>
-          <Span>
-            {street_name}, {street_number}, {neighborhood}
-          </Span>
+          <Span>{pricing}</Span>
         </Texto>
       </ContainerProduct>
     </Li>
