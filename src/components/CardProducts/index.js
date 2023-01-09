@@ -1,6 +1,5 @@
-// import { display } from '@mui/system'
 import React from 'react'
-import { Container, Li, Span, P, Titulo, Img, Texto, Logo } from './styles'
+import { ContainerProduct, Li, Span, P, Titulo, Img, Texto, Logo} from './styles'
 
 export default function Card({
   name,
@@ -12,7 +11,7 @@ export default function Card({
 }) {
   return (
     <Li>
-      <Container>
+      <ContainerProduct>
         <Logo>
           <Img align="left" src={logo}></Img>
         </Logo>
@@ -23,7 +22,7 @@ export default function Card({
             {street_name}, {street_number}, {neighborhood}
           </Span>
         </Texto>
-      </Container>
+      </ContainerProduct>
     </Li>
   )
 }
