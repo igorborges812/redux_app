@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Navigate, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import Card from './components/CardProducts'
 import api from './services/api'
 // import { Container, Li } from './styles'
@@ -26,7 +26,7 @@ export default function CardProducts() {
         <Card
           // key={restaurante._id}
           name={products.name}
-          url={products.url}
+          url={products.imgs[0].url}
           description={products.description}
           pricing={products.pricing}
         />

@@ -7,10 +7,10 @@ export const ContainerProduct = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 16px;
+  margin: 8px;
 
   /* position: relative; */
   width: 266px;
-  height: 274px;
 
   background: #ffffff;
 
@@ -31,6 +31,7 @@ export const TituloProduct = styled.div`
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
+  margin-top: 8px;
 
   text-align: center;
 
@@ -42,6 +43,7 @@ export const SpanProduct = styled.div`
   font-weight: 400;
   font-size: 10px;
   line-height: 150%;
+  margin-top: 8px;
 
   text-align: center;
 
@@ -53,6 +55,7 @@ export const SpanPrice = styled.div`
   font-weight: 400;
   font-size: 16px;
   line-height: 23px;
+  margin-top: 9px;
 
   text-align: center;
 
