@@ -17,3 +17,44 @@ export const ContainerProduct = styled.div`
   border: 1px solid #e5e4e6;
   border-radius: 7px;
 `
+export const ImgProduct = styled.img`
+  width: 90px;
+  height: 90px;
+  left: 88px;
+  top: 16px;
+
+  border-radius: 7px;
+`
+export const TituloProduct = styled.div`
+  font-family: 'Gordita';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+
+  text-align: center;
+
+  color: #6d5d7a;
+`
+export const SpanProduct = styled.div`
+  font-family: 'Gordita';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 150%;
+
+  text-align: center;
+
+  color: #979797;
+`
+export const SpanPrice = styled.div`
+  font-family: 'Gordita';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+
+  text-align: center;
+
+  color: #55b84b;
+`

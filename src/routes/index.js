@@ -11,7 +11,7 @@ function Routes() {
       <Switch>
         <Route exact path="/" element={<App />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/products" element={<Products />} />
+        <Route path="/business/:id/products" element={<Products />} />
       </Switch>
     </BrowserRouter>
   )

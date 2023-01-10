@@ -1,45 +1,38 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import api from './services/api'
 import Card from './components/Card'
 
-class Home extends Component {
-  state = {}
+const Home = () => {
+  const [restaurantes, setRestaurantes] = useState([])
 
-  async componentDidMount() {
-    const response = await api.get('')
+  const navigate = useNavigate()
 
-    this.setState({ restaurantes: response.data })
+  const getRestaurantes = async () => {
+    const response = await api.get('/business')
+
+    setRestaurantes(response.data.data)
   }
 
-  render() {
-    const { restaurantes } = this.state
-    console.log(restaurantes)
-    return (
-      <div>
-        {restaurantes?.data.map(restaurante => (
-          <Card 
-            // key={restaurante._id}
-            name={restaurante.name}
-            logo={restaurante.assets.logo}
-            description={restaurante.description}
-            street_name={restaurante.address.street_name}
-            street_number={restaurante.address.street_number}
-            neighborhood={restaurante.address.neighborhood}
-          />
-        ))}
-        {restaurantes?.data.map(restaurante => (
-          <Card
-            // key={restaurante._id}
-            name={restaurante.name}
-            logo={restaurante.assets.logo}
-            description={restaurante.description}
-            street_name={restaurante.address.street_name}
-            street_number={restaurante.address.street_number}
-            neighborhood={restaurante.address.neighborhood}
-          />
-        ))}
-      </div>
-    )
-  }
+  useEffect(() => {
+    getRestaurantes()
+  })
+
+  return (
+    <div>
+      {restaurantes?.map(restaurante => (
+        <Card
+          // key={restaurante._id}
+          onClick={() => navigate(`/business/${restaurante._id}/products`)}
+          name={restaurante.name}
+          logo={restaurante.assets.logo}
+          description={restaurante.description}
+          street_name={restaurante.address.street_name}
+          street_number={restaurante.address.street_number}
+          neighborhood={restaurante.address.neighborhood}
+        />
+      ))}
+    </div>
+  )
 }
 export default Home

@@ -8,11 +8,12 @@ export default function Card({
   street_number,
   neighborhood,
   description,
-  logo
+  logo,
+  onClick
 }) {
   return (
     <Li>
-      <Container>
+      <Container onClick={onClick}>
         <Logo>
           <Img align="left" src={logo}></Img>
         </Logo>
