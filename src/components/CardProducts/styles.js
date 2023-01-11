@@ -61,3 +61,53 @@ export const SpanPrice = styled.div`
 
   color: #55b84b;
 `
+export const QtdButton = styled.button`
+  width: 24px;
+  height: 24px;
+
+  border: none;
+  /* border-radius: 14px; */
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ecebed;
+  font-weight: 400;
+  font-size: 16px;
+
+  background: #249cf2;
+
+  cursor: pointer;
+`
+
+export const Text = styled.button`
+  width: 24px;
+  height: 24px;
+
+  border: none;
+  /* border-radius: 14px; */
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 16px;
+
+  background: #249cf2;
+
+  cursor: pointer;
+`
+
+export const Botao = styled.button`
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+
+  margin-top: 15.5px;
+
+  border-radius: 7px;
+  background: #249cf2;
+`
