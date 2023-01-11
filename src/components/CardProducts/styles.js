@@ -59,6 +59,10 @@ export const SpanPrice = styled.div`
 
   text-align: center;
 
+  &::before {
+    content: 'R$';
+  }
+
   color: #55b84b;
 `
 export const QtdButton = styled.button`

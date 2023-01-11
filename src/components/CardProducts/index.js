@@ -1,5 +1,5 @@
-import { Grid } from '@mui/material'
 import React from 'react'
+import masks from '../../utils/masks'
 import {
   ContainerProduct,
   TituloProduct,
@@ -17,7 +17,7 @@ export default function Card({ name, description, url, pricing }) {
       <ImgProduct align="left" src={url}></ImgProduct>
       <TituloProduct>{name}</TituloProduct>
       <SpanProduct>{description}</SpanProduct>
-      <SpanPrice>{pricing}</SpanPrice>
+      <SpanPrice> {masks.currencyAllPlatforms(pricing)}</SpanPrice>
 
       <Botao>
         <QtdButton
