@@ -13,6 +13,7 @@ import {
 
 export default function Card({ name, description, url, pricing }) {
   return (
+ 
     <ContainerProduct>
       <ImgProduct align="left" src={url}></ImgProduct>
       <TituloProduct>{name}</TituloProduct>
@@ -38,5 +39,6 @@ export default function Card({ name, description, url, pricing }) {
         </QtdButton>
       </Botao>
     </ContainerProduct>
+    
   )
 }

@@ -1,3 +1,4 @@
+import { Grid } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import Card from './components/CardProducts'
@@ -21,16 +22,24 @@ export default function CardProducts() {
   }, [])
 
   return (
-    <div>
+    <Grid
+      container
+      // direction="row"
+      marginLeft={5}
+      justifyContent="flex-start"
+      alignItems="flex-start"
+    >
       {product?.map(products => (
-        <Card
-          // key={restaurante._id}
-          name={products.name}
-          url={products.imgs[0].url}
-          description={products.description}
-          pricing={products.pricing}
-        />
+        <Grid item xs={2}>
+          <Card
+            // key={restaurante._id}
+            name={products.name}
+            url={products.imgs[0].url}
+            description={products.description}
+            pricing={products.pricing}
+          />
+        </Grid>
       ))}
-    </div>
+    </Grid>
   )
 }
