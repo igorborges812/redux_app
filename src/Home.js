@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import api from './services/api'
 import Card from './components/Card'
-import { Grid } from '@mui/material'
+import { Grid, Pagination } from '@mui/material'
 
 import Searchbar from './components/Searchbar'
 import { SearchbarContainer } from './components/Searchbar/styles'
+import { Container } from '@mui/system'
 
 const Home = () => {
   const [restaurantes, setRestaurantes] = useState([])
@@ -30,9 +31,7 @@ const Home = () => {
       justifyContent="flex-start"
       alignItems="flex-start"
     >
-      {/* <SearchbarContainer> */}
-      <Searchbar onSearch={value => (value)} />
-      {/* </SearchbarContainer> */}
+      <Searchbar></Searchbar>
 
       {restaurantes?.map(restaurante => (
         <Grid item xs={2}>
@@ -48,6 +47,10 @@ const Home = () => {
           />
         </Grid>
       ))}
+
+      <Container>
+        <Pagination numbPages={1} />
+      </Container>
     </Grid>
   )
 }

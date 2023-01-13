@@ -42,7 +42,7 @@ export const SearchbarInput = styled.input`
   font-size: 16px;
 
   padding: 0px 10px;
-  height: 45px;
+  height: 35px;
   /* border-radius: 4px; */
   transition: border-color 200ms linear;
   :hover,
