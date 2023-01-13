@@ -1,8 +1,8 @@
 import React from 'react'
 import './App.css'
-import logo from './img/logo.png'
-import cart from './img/cart.png'
-import elipse from './img/elipse.png'
+import logo from './assets/img/logo.png'
+import cart from './assets/img/cart.png'
+import elipse from './assets/img/elipse.png'
 // import { Grid } from '@mui/material'
 import Chevron from 'react-chevron'
 
