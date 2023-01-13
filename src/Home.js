@@ -4,6 +4,9 @@ import api from './services/api'
 import Card from './components/Card'
 import { Grid } from '@mui/material'
 
+import Searchbar from './components/Searchbar'
+import { SearchbarContainer } from './components/Searchbar/styles'
+
 const Home = () => {
   const [restaurantes, setRestaurantes] = useState([])
 
@@ -27,6 +30,10 @@ const Home = () => {
       justifyContent="flex-start"
       alignItems="flex-start"
     >
+      {/* <SearchbarContainer> */}
+      <Searchbar onSearch={value => (value)} />
+      {/* </SearchbarContainer> */}
+
       {restaurantes?.map(restaurante => (
         <Grid item xs={2}>
           <Card

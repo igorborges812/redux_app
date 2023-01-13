@@ -3,23 +3,21 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import Card from './components/CardProducts'
 import api from './services/api'
-// import { Container, Li } from './styles'
 
 export default function CardProducts() {
   const [product, setProducts] = useState([])
 
   const { id } = useParams()
 
-  const getProducts = async () => {
-    const response = await api.get(`/product/business/${id}`)
-
-    setProducts(response.data.data)
-    console.log(response.data)
-  }
-
   useEffect(() => {
+    const getProducts = async () => {
+      const response = await api.get(`/product/business/${id}`)
+
+      setProducts(response.data.data)
+    }
+
     getProducts()
-  }, [])
+  }, [id])
 
   return (
     <Grid
