@@ -111,7 +111,4 @@ export const Botao = styled.button`
   align-items: center;
 
   margin-top: 15.5px;
-
-  border-radius: 7px;
-  background: #249cf2;
 `
