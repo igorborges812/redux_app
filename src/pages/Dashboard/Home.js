@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import api from './services/api'
-import Card from './components/Card'
+import api from '../../services/api'
+import Card from '../../components/Card'
 import { Grid, Pagination } from '@mui/material'
 
-import Searchbar from './components/Searchbar'
-import { SearchbarContainer } from './components/Searchbar/styles'
+import Searchbar from '../../components/Searchbar'
+import { SearchbarContainer } from '../../components/Searchbar/styles'
 import { Container } from '@mui/system'
 
 const Home = () => {
